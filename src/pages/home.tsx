@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Clock from "../components/Clock";
 import "./home.scss";
-import "@icon-park/react/styles/index.css"
+import "@icon-park/react/styles/index.css";
 import { Bill } from "@icon-park/react";
+import * as echarts from "echarts";
+import { Chart1 } from "../components/Chart1";
 
 export const Home = () => {
   return (
@@ -14,11 +16,13 @@ export const Home = () => {
         <Bill theme="outline" size="24" fill="#6d929d" strokeLinejoin="bevel" />
       </header>
       <main>
-        <section className="section1"></section>
-        <section className="section2"></section>
-        <section className="section3"></section>
-        <section className="section4"></section>
-        <section className="section5"></section>
+        <section className="section1">
+          <Chart1 />
+        </section>
+        <section className="bordered section2"></section>
+        <section className="bordered section3"></section>
+        <section className="bordered section4"></section>
+        <section className="bordered section5"></section>
       </main>
     </div>
   );
