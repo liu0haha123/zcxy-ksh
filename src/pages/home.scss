@@ -8,19 +8,69 @@
     background: #010310;
     color: white;
 
-    .header {
-        height: px(71);
-        background-size: cover;
+    header {
+        height: px(88);
+        display: flex;
+        justify-content: center;
+        color: #eee;
+        font-size: px(15);
+        background: linear-gradient(90deg, rgba(8, 24, 35, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(8, 24, 35, 1) 100%);
+        position: relative;
+        text-shadow: 0 0 10px #1d393d;
+
+        .i-icon-bill {
+
+            position: absolute;
+            right: 0;
+            font-size: px(9);
+            color: #6d929d;
+            padding: px(18) px(13);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, rgba(16, 48, 65, 1) 0%, rgba(0, 0, 0, 0) 25%, rgba(26, 58, 75, 1) 50%, rgba(0, 0, 0, 0) 75%, rgba(16, 48, 65, 1) 100%);
+        }
+
+        .title {
+            margin-top: px(15);
+            font-size: px(45);
+        }
+
+        .clock {
+            margin-top: px(2);
+            position: absolute;
+            left: px(14);
+            color: #6d929d;
+
+            >div {
+                &:first-child {
+                    font-size: px(9);
+                    margin-bottom: px(1);
+                }
+
+                &:nth-child(2) {
+                    font-size: px(5)
+                }
+            }
+        }
+
+
     }
 
     >main {
         flex: 1;
         display: grid;
         grid-template:
-            "box1 box2 box4 box5"755fr 
-            "box3 box3 box4 box5"363fr / 366fr 361fr 811fr 747fr;
+            "box1 box2 box4 box5"755fr "box3 box3 box4 box5"363fr / 366fr 361fr 811fr 747fr;
         grid-column-gap: px(28);
         grid-row-gap: px(28);
+
         >.section1 {
             grid-area: box1;
             background-color: pink;
