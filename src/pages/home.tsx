@@ -12,6 +12,7 @@ import { Chart6 } from "../components/Chart6";
 import { Chart7 } from "../components/Chart7";
 import { Chart8 } from "../components/Chart8";
 import { Chart9 } from "../components/Chart9";
+import { Chart10 } from "../components/Chart10";
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -46,6 +47,7 @@ export const Home = () => {
         </section>
         <section className="section5">
           <Chart5 />
+          <Chart10 />
         </section>
       </main>
       <footer>&copy; HEU 2021-{year}</footer>

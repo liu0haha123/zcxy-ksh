@@ -13,6 +13,8 @@ export const Chart5 = () => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(
       createEchartsOptions({
+        xAxis: { show: false },
+        yAxis: { show: false },
         // 提示框的配置
         tooltip: {
           formatter: (x) => {
@@ -24,11 +26,11 @@ export const Chart5 = () => {
 
         legend: {
           x: "center",
-            show: true,
-            textStyle:{
-                color: "yellow",
-                fontSize:px(22)
-            }
+          show: true,
+          textStyle: {
+            color: "yellow",
+            fontSize: px(22),
+          },
         },
         series: [
           {
@@ -67,7 +69,7 @@ export const Chart5 = () => {
               },
             },
             force: {
-              repulsion: 800, //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
+              repulsion: [700,1300], //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
               edgeLength: px(10), //边的两个节点之间的距离
               gravity: 0.1, //节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
             },

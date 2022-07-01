@@ -100,6 +100,7 @@
 
             &::before {
                 content: '';
+                pointer-events: none;
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -146,6 +147,9 @@
 
         >.section5 {
             grid-area: box5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
         }
 
@@ -156,7 +160,8 @@
         .知识图谱,
         .政策森林,
         .数据来源,
-        .年龄段 {
+        .年龄段,
+        .雷达图 {
             height: px(365);
             display: flex;
             flex-direction: column;
@@ -176,6 +181,34 @@
             .chart {
                 flex: 1;
                 width: 100%;
+            }
+        }
+
+        .雷达图 {
+            height: px(530);
+
+            .legend {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                padding: 0 px(20) px(10);
+
+                >.first,
+                >.second {
+                    display: inline-block;
+                    width: px(18);
+                    height: px(12);
+                    margin: 0 px(10);
+                }
+
+                .first {
+                    background: #57aaed
+                }
+
+                .second {
+                    background: #b92ae8
+                }
             }
         }
 
