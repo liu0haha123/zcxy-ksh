@@ -13,7 +13,7 @@ export const Chart10 = () => {
         xAxis: { show: false },
         yAxis: { show: false },
         textStyle: {
-          fontSize: px(22),
+          fontSize: px(16),
           color: "#f1c35b",
         },
         polar: [

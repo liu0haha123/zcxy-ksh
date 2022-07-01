@@ -35,10 +35,9 @@ export const Chart9 = () => {
             },
             data: [
               { value: 0.07, name: "10-20" },
-              { value: 0.1, name: "20-30" },
+              { value: 0.42, name: "20-30" },
               { value: 0.23, name: "30-40" },
               { value: 0.28, name: "40-50" },
-              { value: 0.32, name: "50-60" },
             ],
           },
         ],
@@ -61,8 +60,6 @@ export const Chart9 = () => {
         30-40
         <span style={{ background: colors[3] }} />
         40-50
-        <span style={{ background: colors[4] }} />
-        50-60
       </div>
     </div>
   );

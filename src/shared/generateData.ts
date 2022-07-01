@@ -35,8 +35,8 @@ const linkData = [
         "symbolSize": 5
     },
     {
-        "source": 3,
-        "target": 5,
+        "source": 5,
+        "target": 3,
         "category": 0,
         "value": "照顾",
         "symbolSize": 5
@@ -85,7 +85,7 @@ const nodesData = [
         "id": 4
     },
     {
-        "name": "子女",
+        "name": "职工",
         "category": 2,
         "id": 5
     }

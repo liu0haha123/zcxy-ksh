@@ -15,7 +15,6 @@ import { Chart9 } from "../components/Chart9";
 import { Chart10 } from "../components/Chart10";
 
 export const Home = () => {
-  const year = new Date().getFullYear();
   return (
     <div className="home">
       <header>
@@ -50,7 +49,6 @@ export const Home = () => {
           <Chart10 />
         </section>
       </main>
-      <footer>&copy; HEU 2021-{year}</footer>
     </div>
   );
 };

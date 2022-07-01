@@ -5,9 +5,12 @@ import { px } from "../shared/px";
 
 export const Chart4 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current);
-    myChart.setOption(
+  const myChart = useRef(null);
+  const myData = [
+    0.95, 0.93, 0.91, 0.93, 0.94, 0.95, 0.96, 0.91, 0.89, 0.87, 0.96, 0.95,
+  ];
+  const fetchData = (data) => {
+    myChart.current.setOption(
       createEchartsOptions({
         xAxis: {
           type: "category",
@@ -28,12 +31,9 @@ export const Chart4 = () => {
         },
         series: [
           {
-            name: "有效发布数量",
+            name: "无冲突数量",
             type: "line",
-            data: [
-              0.95, 0.93, 0.91, 0.93, 0.94, 0.95, 0.96, 0.91, 0.89, 0.87, 0.96,
-              0.95,
-            ],
+            data: data,
             symbol: "circle",
             symbolSize: px(12),
             lineStyle: { width: px(2) },
@@ -53,7 +53,32 @@ export const Chart4 = () => {
         ],
       })
     );
+  };
+    useEffect(() => {
+      myChart.current = echarts.init(divRef.current);
+      fetchData(myData);
+    }, []);
+  useEffect(() => {
+    setInterval(() => {
+      const newData = [
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+        0.7 + Math.random() * 0.3,
+      ];
+      fetchData(newData);
+    }, 1000);
   }, []);
+
+
 
   return (
     <div className="bordered 有效发布">

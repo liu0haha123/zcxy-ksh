@@ -4,13 +4,12 @@ import { px } from "../shared/px";
 import { createEchartsOptions } from "../shared/create-echarts-options";
 import { baseEchartOptions } from "../shared/base-echart-options";
 
-
-
 export const Chart1 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current);
-    myChart.setOption(
+  const myChart = useRef(null);
+  const myData = [14, 40, 36, 41, 15, 36]
+  const fetchData = (data) => {
+    myChart.current.setOption(
       createEchartsOptions({
         ...baseEchartOptions,
         xAxis: {
@@ -53,12 +52,23 @@ export const Chart1 = () => {
         series: [
           {
             type: "bar",
-            data: [14, 40, 36, 41, 15, 36],
+            data: data,
           },
         ],
       })
     );
+  };
+  useEffect(() => {
+    setInterval(() => {
+      const newData = myData.map(item=>item+Math.random()*10)
+      fetchData(newData);
+    }, 1000);
   }, []);
+
+    useEffect(() => {
+      myChart.current = echarts.init(divRef.current);
+      fetchData(myData);
+    }, []);
 
   return (
     <div className="bordered 政策数量">

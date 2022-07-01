@@ -49,15 +49,15 @@ export const Chart5 = () => {
                 },
               },
               {
-                name: "实施者",
-                itemStyle: {
-                  color: "orange",
-                },
-              },
-              {
                 name: "行为",
                 itemStyle: {
                   color: "pink",
+                },
+              },
+              {
+                name: "实施者",
+                itemStyle: {
+                  color: "orange",
                 },
               },
             ],
@@ -69,8 +69,8 @@ export const Chart5 = () => {
               },
             },
             force: {
-              repulsion: [700,1300], //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
-              edgeLength: px(10), //边的两个节点之间的距离
+              repulsion: [700, 1300], //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
+              edgeLength: px(6), //边的两个节点之间的距离
               gravity: 0.1, //节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
             },
             edgeSymbolSize: [4, 20], // 边两端的标记大小，可以是一个数组分别指定两端，也可以是单个统一指定。
