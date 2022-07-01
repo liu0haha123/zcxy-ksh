@@ -9,7 +9,6 @@ export const Chart5 = () => {
   useEffect(() => {
     const links = linkData;
     const nodes = nodesData;
-    console.log(nodes);
     var myChart = echarts.init(divRef.current);
     myChart.setOption(
       createEchartsOptions({
@@ -65,13 +64,14 @@ export const Chart5 = () => {
               show: true,
               textStyle: {
                 fontSize: px(18),
-                color: "black",
+                color: "red",
               },
             },
             force: {
-              repulsion: 800, //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
-              edgeLength: px(6), //边的两个节点之间的距离
-              gravity: 0.1, //节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
+              repulsion: 1400, //节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大
+              edgeLength: px(15), //边的两个节点之间的距离
+              gravity: 0.4, //节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
+              layoutAnimation: true,
             },
             edgeSymbolSize: [4, 20], // 边两端的标记大小，可以是一个数组分别指定两端，也可以是单个统一指定。
             edgeLabel: {
@@ -79,7 +79,7 @@ export const Chart5 = () => {
               textStyle: {
                 fontSize: px(15),
               },
-              formatter: "{c}",
+              formatter: "",
             },
             data: nodes,
             links: links,

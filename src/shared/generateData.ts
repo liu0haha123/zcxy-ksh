@@ -55,6 +55,13 @@ const linkData = [
         "value": "影响",
         "symbolSize": 5
     },
+    {
+        "source": 4,
+        "target": 1,
+        "category": 0,
+        "value": "影响",
+        "symbolSize": 5
+    },
 ]
 
 
@@ -88,7 +95,7 @@ const nodesData = [
         "name": "职工",
         "category": 2,
         "id": 5
-    }
+    },
 ]
 
 
