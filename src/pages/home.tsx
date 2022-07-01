@@ -20,7 +20,7 @@ export const Home = () => {
       <header>
         <Clock />
         <span className="title">政策血缘数据可视化展示</span>
-        <Bill theme="outline" size="22" fill="#6d929d" strokeLinejoin="bevel" />
+        <Bill theme="outline" size="26" fill="#6d929d" strokeLinejoin="bevel" />
       </header>
       <main>
         <section className="section1">
