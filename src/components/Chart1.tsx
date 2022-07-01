@@ -61,7 +61,7 @@ export const Chart1 = () => {
   }, []);
 
   return (
-    <div className="bordered 管辖统计">
+    <div className="bordered 政策数量">
       <h2>政策条目数</h2>
       <div ref={divRef} className="chart"></div>
     </div>
