@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Clock from "../components/Clock";
 import "./home.scss";
 import "@icon-park/react/styles/index.css";
@@ -9,6 +9,9 @@ import { Chart3 } from "../components/Chart3";
 import { Chart4 } from "../components/Chart4";
 import { Chart5 } from "../components/Chart5";
 import { Chart6 } from "../components/Chart6";
+import { Chart7 } from "../components/Chart7";
+import { Chart8 } from "../components/Chart8";
+import { Chart9 } from "../components/Chart9";
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -31,7 +34,16 @@ export const Home = () => {
         <section className="bordered section3">
           <Chart6 />
         </section>
-        <section className="bordered section4"></section>
+        <section className="section4">
+          <Chart7 />
+          <div className="bordered 年龄段">
+            <h2>政策关注对象分布</h2>
+            <div className="charts">
+              <Chart8 />
+              <Chart9 />
+            </div>
+          </div>
+        </section>
         <section className="section5">
           <Chart5 />
         </section>
