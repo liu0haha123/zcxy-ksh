@@ -32,12 +32,12 @@ code {
 body {
   font-family: $font-hei;
   font-size: 16px;
-  background: #00020b;
+  background: rgba(8, 24, 35, 1);
 }
 
 #root {
   margin: 0 auto;
-  background-color: greenyellow;
+
   display: flex;
   flex-direction: column;
 
